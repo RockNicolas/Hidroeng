@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: Inter, Segoe UI, Roboto, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #020617;
+}
