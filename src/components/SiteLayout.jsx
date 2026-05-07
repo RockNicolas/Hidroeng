@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { FaLinkedinIn, FaInstagram, FaWhatsapp } from 'react-icons/fa'
-import logo from '../assets/logo-page-Photoroom.png'
+import logo from '../assets/logo/logo-page-Photoroom.png'
 
 const navLinks = [
   { to: '/', label: 'Inicio' },
@@ -15,7 +15,7 @@ function SiteLayout() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white text-slate-800 shadow-sm">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-3">
+        <div className="flex w-full items-center justify-between gap-6 px-4 py-3 md:px-8 lg:px-10">
           <NavLink to="/" className="flex items-center gap-3">
             <img
               src={logo}
@@ -47,7 +47,7 @@ function SiteLayout() {
           </nav>
         </div>
 
-        <nav className="mx-auto flex max-w-6xl overflow-x-auto border-t border-slate-200 px-4 py-2 md:hidden">
+        <nav className="flex w-full overflow-x-auto border-t border-slate-200 px-4 py-2 md:hidden">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
@@ -66,7 +66,7 @@ function SiteLayout() {
         </nav>
       </header>
 
-      <main className="mx-auto w-full max-w-6xl px-4 py-10">
+      <main className="mx-auto w-full max-w-6xl px-4 pb-10 pt-0">
         <Outlet />
       </main>
 

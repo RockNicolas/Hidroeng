@@ -1,6 +1,9 @@
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBuilding, FaClipboardCheck, FaHandshake, FaTools } from 'react-icons/fa'
 import SectionTitle from '../components/SectionTitle'
+import houseOne from '../assets/casas/Modern-Minimalist-House.png'
+import houseTwo from '../assets/casas/Modern-Architectural-Elegance.png'
 
 const stats = [
   { value: '15+', label: 'Anos de experiencia' },
@@ -32,59 +35,104 @@ const services = [
 ]
 
 function HomePage() {
+  const [showSecondHero, setShowSecondHero] = useState(false)
+  const secondHeroRef = useRef(null)
+
+  useEffect(() => {
+    const element = secondHeroRef.current
+    if (!element) return undefined
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowSecondHero(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.25 }
+    )
+
+    observer.observe(element)
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <div className="space-y-16">
-      <section className="rounded-3xl border border-sky-400/25 bg-gradient-to-br from-slate-900 to-slate-800 px-6 py-12 md:px-10">
-        <p className="inline-flex rounded-full border border-orange-400/40 bg-orange-500/10 px-4 py-1 text-xs uppercase tracking-wider text-orange-300">
-          Engenharia que constroi o futuro
-        </p>
-        <h1 className="mt-4 max-w-3xl text-4xl font-black text-white md:text-6xl">
-          Solucoes em engenharia e infraestrutura para projetos de alto impacto
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-slate-300">
-          A Hidroeng transforma desafios tecnicos em resultados concretos com tecnologia, experiencia e compromisso
-          com a qualidade.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link to="/contato" className="rounded-lg bg-sky-500 px-5 py-3 font-semibold text-slate-950 hover:bg-sky-400">
-            Solicitar proposta
-          </Link>
-          <Link
-            to="/portfolio"
-            className="rounded-lg border border-slate-600 px-5 py-3 font-semibold text-slate-100 hover:border-orange-400 hover:text-orange-300"
-          >
-            Ver portfolio
-          </Link>
+    <div>
+      <section
+        className="relative -mx-[calc(50dvw-50%)] w-dvw overflow-hidden border-y border-white/20"
+        style={{
+          backgroundImage: `linear-gradient(rgba(2, 6, 23, 0.62), rgba(2, 6, 23, 0.62)), url(${houseOne})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+      >
+        <div className="flex min-h-[calc(100vh-72px)] flex-col items-center justify-center px-6 py-12 text-center">
+          <h1 className="font-display text-4xl font-light uppercase tracking-wide text-white md:text-7xl">
+            Construindo Qualidade
+          </h1>
+          <p className="font-display mt-6 text-xl font-semibold uppercase tracking-[0.35em] text-white/90 md:text-3xl">
+            Desde 1976
+          </p>
+          <div className="mt-6 h-[2px] w-44 bg-white/75 md:w-72" />
+          <p className="font-display mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-white md:text-2xl">
+            Construimos sonhos, todos os dias!
+          </p>
         </div>
       </section>
 
-      <section>
-        <div className="grid gap-4 md:grid-cols-3">
-          {stats.map((item) => (
-            <article key={item.label} className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
-              <p className="text-4xl font-bold text-sky-300">{item.value}</p>
-              <p className="mt-2 text-slate-300">{item.label}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <div className="space-y-16 pt-0">
+        <section
+          ref={secondHeroRef}
+          className={`relative -mx-[calc(50dvw-50%)] w-dvw overflow-hidden border-y border-white/20 transition-opacity duration-1000 ${
+            showSecondHero ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{
+            backgroundImage: `linear-gradient(rgba(2, 6, 23, 0.62), rgba(2, 6, 23, 0.62)), url(${houseTwo})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed',
+          }}
+        >
+          <div className="flex min-h-[calc(100vh-72px)] flex-col items-center justify-center px-6 py-12 text-center">
+            <h2 className="font-display text-3xl font-light uppercase tracking-wide text-white md:text-6xl">
+              Projetos de Alto Padrao
+            </h2>
+            <p className="font-display mt-6 text-sm font-semibold uppercase tracking-[0.25em] text-white/90 md:text-xl">
+              Design, inovacao e excelencia construtiva
+            </p>
+          </div>
+        </section>
 
-      <section>
-        <SectionTitle
-          eyebrow="Nossos servicos"
-          title="Atuacao completa para o seu empreendimento"
-          text="Unimos engenharia, gestao e execucao em um unico parceiro para acelerar resultados."
-        />
-        <div className="grid gap-4 md:grid-cols-2">
-          {services.map(({ icon: Icon, title, text }) => (
-            <article key={title} className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
-              <Icon className="text-3xl text-orange-400" />
-              <h3 className="mt-4 text-xl font-bold text-white">{title}</h3>
-              <p className="mt-2 text-slate-300">{text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+        <section>
+          <div className="grid gap-4 md:grid-cols-3">
+            {stats.map((item) => (
+              <article key={item.label} className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+                <p className="text-4xl font-bold text-sky-300">{item.value}</p>
+                <p className="mt-2 text-slate-300">{item.label}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <SectionTitle
+            eyebrow="Nossos servicos"
+            title="Atuacao completa para o seu empreendimento"
+            text="Unimos engenharia, gestao e execucao em um unico parceiro para acelerar resultados."
+          />
+          <div className="grid gap-4 md:grid-cols-2">
+            {services.map(({ icon: Icon, title, text }) => (
+              <article key={title} className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+                <Icon className="text-3xl text-orange-400" />
+                <h3 className="mt-4 text-xl font-bold text-white">{title}</h3>
+                <p className="mt-2 text-slate-300">{text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   )
 }
