@@ -1,12 +1,13 @@
 import { NavLink, Outlet } from 'react-router-dom'
-import { FaLinkedinIn, FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp } from 'react-icons/fa'
 import logo from '../assets/logo/logo-page-Photoroom.png'
+import Footer from './Footer'
 
 const navLinks = [
   { to: '/', label: 'Inicio' },
   { to: '/empresa', label: 'Empresa' },
   { to: '/empreendimentos', label: 'Empreendimentos' },
-  { to: '/portfolio', label: 'Portfolio' },
+  { to: '/portfolio', label: 'Portfólio' },
   { to: '/depoimentos', label: 'Depoimentos' },
   { to: '/contato', label: 'Contato' },
 ]
@@ -14,17 +15,17 @@ const navLinks = [
 function SiteLayout() {
   return (
     <div className="min-h-screen bg-slate-100 text-slate-100">
-      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white text-slate-800 shadow-sm">
-        <div className="flex w-full items-center justify-between gap-6 px-4 py-3 md:px-8 lg:px-10">
+      <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-gradient-to-b from-[rgba(248,250,252,0.95)] via-[rgba(248,250,252,0.75)] to-[rgba(248,250,252,0.15)] text-slate-800 shadow-sm backdrop-blur-sm">
+        <div className="flex w-full items-center justify-between gap-3 px-3 py-2 sm:px-4 sm:py-3 md:gap-6 md:px-8 lg:px-10">
           <NavLink to="/" className="flex items-center gap-3">
             <img
               src={logo}
               alt="Logo Hidroeng Infraestrutura"
-              className="h-12 w-12 object-contain"
+              className="h-9 w-9 object-contain sm:h-12 sm:w-12"
             />
             <div>
-              <p className="text-sm font-bold uppercase tracking-wider text-sky-700">Hidroeng</p>
-              <p className="text-xs uppercase tracking-widest text-orange-500">Infraestrutura</p>
+              <p className="text-xs font-bold uppercase tracking-wider text-sky-700 sm:text-sm">Hidroeng</p>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-orange-500 sm:text-xs">Infraestrutura</p>
             </div>
           </NavLink>
 
@@ -66,7 +67,7 @@ function SiteLayout() {
         </nav>
       </header>
 
-      <main className="mx-auto w-full max-w-6xl px-4 pb-10 pt-0">
+      <main className="mx-auto w-full max-w-6xl px-3 pb-10 pt-0 sm:px-4">
         <Outlet />
       </main>
 
@@ -75,27 +76,12 @@ function SiteLayout() {
         target="_blank"
         rel="noreferrer"
         aria-label="Falar no WhatsApp"
-        className="fixed bottom-5 right-5 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-4xl text-white shadow-md transition hover:scale-105 hover:bg-[#20c75a]"
+        className="fixed bottom-4 right-4 z-50 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-3xl text-white shadow-md transition hover:scale-105 hover:bg-[#20c75a] sm:bottom-5 sm:right-5 sm:h-12 sm:w-12 sm:text-4xl"
       >
         <FaWhatsapp />
       </a>
 
-      <footer className="border-t border-slate-800 bg-slate-900">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-slate-300 md:flex-row md:items-center md:justify-between">
-          <p>Hidroeng Infraestrutura - Engenharia que constroi o futuro.</p>
-          <div className="flex items-center gap-3 text-lg">
-            <a href="#" aria-label="Instagram" className="rounded-full bg-slate-800 p-2 hover:text-orange-400">
-              <FaInstagram />
-            </a>
-            <a href="#" aria-label="LinkedIn" className="rounded-full bg-slate-800 p-2 hover:text-sky-300">
-              <FaLinkedinIn />
-            </a>
-            <a href="#" aria-label="WhatsApp" className="rounded-full bg-slate-800 p-2 hover:text-green-400">
-              <FaWhatsapp />
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

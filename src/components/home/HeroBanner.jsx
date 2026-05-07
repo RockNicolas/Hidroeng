@@ -16,16 +16,16 @@ function HeroBanner({ image, title, subtitle }) {
         backgroundAttachment: 'fixed',
       }}
     >
-      <div className="flex h-[calc(100vh-72px)] flex-col items-center justify-center px-6 py-8 text-center">
+      <div className="flex h-[85svh] min-h-[520px] flex-col items-center justify-center px-4 py-8 text-center sm:px-6 md:h-[calc(100vh-72px)]">
         <h2
-          className={`font-display text-3xl font-light uppercase tracking-wide text-white transition-all duration-1000 md:text-6xl ${
+          className={`font-display text-2xl font-light uppercase tracking-wide text-white transition-all duration-1000 sm:text-3xl md:text-6xl ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
           }`}
         >
           {title}
         </h2>
         <p
-          className={`font-display mt-6 text-sm font-semibold uppercase tracking-[0.25em] text-white/90 transition-all delay-150 duration-1000 md:text-xl ${
+          className={`font-display mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/90 transition-all delay-150 duration-1000 sm:text-sm sm:tracking-[0.25em] md:text-xl ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
           }`}
         >

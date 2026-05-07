@@ -32,8 +32,8 @@ function ContactPage() {
         </div>
       </div>
 
-      <form className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
-        <h3 className="text-2xl font-bold text-white">Solicite um retorno</h3>
+      <form className="rounded-2xl border border-slate-800 bg-slate-900 p-4 sm:p-6">
+        <h3 className="text-xl font-bold text-white sm:text-2xl">Solicite um retorno</h3>
         <div className="mt-5 space-y-4">
           <input
             type="text"

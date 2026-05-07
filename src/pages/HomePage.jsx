@@ -24,7 +24,7 @@ function HomePage() {
     <div>
       <section
         ref={firstHeroRef}
-        className={`relative -mx-[calc(50dvw-50%)] w-dvw overflow-hidden border-y border-white/20 transition-all duration-1000 ${
+        className={`relative -mt-[62px] -mx-[calc(50dvw-50%)] w-dvw overflow-hidden border-y border-white/20 transition-all duration-1000 sm:-mt-[72px] ${
           firstHeroVisible ? 'reveal-visible' : 'reveal-hidden'
         }`}
         style={{
@@ -34,16 +34,16 @@ function HomePage() {
           backgroundAttachment: 'fixed',
         }}
       >
-        <div className="flex h-screen flex-col items-center justify-center px-6 py-8 text-center">
+        <div className="flex h-[85svh] min-h-[520px] flex-col items-center justify-center px-4 pb-8 pt-16 text-center sm:px-6 sm:pt-20 md:h-screen">
           <h1
-            className={`font-display text-4xl font-light uppercase tracking-wide text-white transition-all duration-1000 md:text-7xl ${
+            className={`font-display text-3xl font-light uppercase tracking-wide text-white transition-all duration-1000 sm:text-4xl md:text-7xl ${
               firstHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
             }`}
           >
             Construindo Qualidade
           </h1>
           <p
-            className={`font-display mt-6 text-xl font-semibold uppercase tracking-[0.35em] text-white/90 transition-all delay-150 duration-1000 md:text-3xl ${
+            className={`font-display mt-5 text-base font-semibold uppercase tracking-[0.2em] text-white/90 transition-all delay-150 duration-1000 sm:text-xl sm:tracking-[0.35em] md:text-3xl ${
               firstHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
             }`}
           >
@@ -55,7 +55,7 @@ function HomePage() {
             }`}
           />
           <p
-            className={`font-display mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-all delay-500 duration-1000 md:text-2xl ${
+            className={`font-display mt-7 text-xs font-semibold uppercase tracking-[0.15em] text-white transition-all delay-500 duration-1000 sm:text-sm sm:tracking-[0.2em] md:text-2xl ${
               firstHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
             }`}
           >
@@ -65,7 +65,7 @@ function HomePage() {
       </section>
 
       <div className="space-y-16 pt-0">
-        <HeroBanner image={houseTwo} title="Projetos de Alto Padrao" subtitle="Design, inovacao e excelencia construtiva" />
+        <HeroBanner image={houseTwo} title="Projetos de Alto Padrão" subtitle="Design, inovação e excelência construtiva" />
         <WhoWeAreSection image={buildingImage} />
         <DevelopmentsHighlightSection images={developmentsGallery} />
         <LocationSection />
