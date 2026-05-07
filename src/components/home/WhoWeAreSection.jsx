@@ -28,7 +28,7 @@ function WhoWeAreSection({ image }) {
             </p>
             <Link
               to="/empresa"
-              className="mt-8 inline-block bg-sky-900 px-8 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-orange-500"
+              className="mt-8 inline-block rounded-full bg-sky-900 px-8 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-orange-500"
             >
               Saiba mais
             </Link>

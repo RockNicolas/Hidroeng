@@ -2,39 +2,19 @@ import { FaBuilding, FaClipboardCheck, FaHandshake, FaTools } from 'react-icons/
 import houseOne from '../assets/casas/Modern-Minimalist-House.png'
 import houseTwo from '../assets/casas/Modern-Architectural-Elegance.png'
 import buildingImage from '../assets/casas/Twilight Modern House.png'
+import houseThree from '../assets/casas/Modern-House-Twilight.png'
+import houseFour from '../assets/casas/Modern-Minimalist-Building.png'
 import HeroBanner from '../components/home/HeroBanner'
-import ServicesSection from '../components/home/ServicesSection'
-import StatsSection from '../components/home/StatsSection'
+import DevelopmentsHighlightSection from '../components/home/DevelopmentsHighlightSection'
+import LocationSection from '../components/home/LocationSection'
 import WhoWeAreSection from '../components/home/WhoWeAreSection'
 import useInView from '../hooks/useInView'
 
-const stats = [
-  { value: '15+', label: 'Anos de experiencia' },
-  { value: '120+', label: 'Projetos concluidos' },
-  { value: '98%', label: 'Clientes satisfeitos' },
-]
-
-const services = [
-  {
-    icon: FaBuilding,
-    title: 'Obras de infraestrutura',
-    text: 'Execucao de projetos urbanos e industriais com foco em seguranca e produtividade.',
-  },
-  {
-    icon: FaTools,
-    title: 'Planejamento tecnico',
-    text: 'Cronogramas detalhados, controle de custo e acompanhamento tecnico especializado.',
-  },
-  {
-    icon: FaClipboardCheck,
-    title: 'Gestao de qualidade',
-    text: 'Processos padronizados e verificacoes constantes para garantir excelencia na entrega.',
-  },
-  {
-    icon: FaHandshake,
-    title: 'Parceria com o cliente',
-    text: 'Atendimento proximo e transparente em cada etapa da obra.',
-  },
+const developmentsGallery = [
+  { src: houseOne, alt: 'Fachada de empreendimento residencial moderno' },
+  { src: houseThree, alt: 'Area interna de empreendimento contemporaneo' },
+  { src: houseFour, alt: 'Conjunto residencial com design funcional' },
+  { src: buildingImage, alt: 'Empreendimento de alto padrao ao entardecer' },
 ]
 
 function HomePage() {
@@ -87,8 +67,8 @@ function HomePage() {
       <div className="space-y-16 pt-0">
         <HeroBanner image={houseTwo} title="Projetos de Alto Padrao" subtitle="Design, inovacao e excelencia construtiva" />
         <WhoWeAreSection image={buildingImage} />
-        <StatsSection stats={stats} />
-        <ServicesSection services={services} />
+        <DevelopmentsHighlightSection images={developmentsGallery} />
+        <LocationSection />
       </div>
     </div>
   )

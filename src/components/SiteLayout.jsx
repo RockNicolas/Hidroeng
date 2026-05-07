@@ -70,6 +70,16 @@ function SiteLayout() {
         <Outlet />
       </main>
 
+      <a
+        href="https://wa.me/5585997665652?text=Ola%2C%20quero%20falar%20com%20a%20Hidroeng."
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Falar no WhatsApp"
+        className="fixed bottom-5 right-5 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-4xl text-white shadow-md transition hover:scale-105 hover:bg-[#20c75a]"
+      >
+        <FaWhatsapp />
+      </a>
+
       <footer className="border-t border-slate-800 bg-slate-900">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-slate-300 md:flex-row md:items-center md:justify-between">
           <p>Hidroeng Infraestrutura - Engenharia que constroi o futuro.</p>

@@ -35,3 +35,8 @@ body,
   transform: translateY(0) scale(1);
   filter: blur(0);
 }
+
+a,
+button {
+  cursor: pointer;
+}
