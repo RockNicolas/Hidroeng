@@ -23,3 +23,15 @@ body,
 .font-display {
   font-family: 'Cinzel', serif;
 }
+
+.reveal-hidden {
+  opacity: 0.45;
+  transform: translateY(28px) scale(1.015);
+  filter: blur(2px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
