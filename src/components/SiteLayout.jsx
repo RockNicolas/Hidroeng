@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { FaLinkedinIn, FaInstagram, FaWhatsapp } from 'react-icons/fa'
-import logo from '../assets/logo-hidroeng.png'
+import logo from '../assets/logo-page-Photoroom.png'
 
 const navLinks = [
   { to: '/', label: 'Inicio' },
@@ -14,21 +14,21 @@ const navLinks = [
 function SiteLayout() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
-      <header className="sticky top-0 z-50 border-b border-sky-400/20 bg-slate-950/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
+      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white text-slate-800 shadow-sm">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-3">
           <NavLink to="/" className="flex items-center gap-3">
             <img
               src={logo}
               alt="Logo Hidroeng Infraestrutura"
-              className="h-12 w-12 rounded-md object-cover"
+              className="h-12 w-12 object-contain"
             />
             <div>
-              <p className="text-sm font-bold uppercase tracking-wider text-sky-300">Hidroeng</p>
-              <p className="text-xs uppercase tracking-widest text-orange-400">Infraestrutura</p>
+              <p className="text-sm font-bold uppercase tracking-wider text-sky-700">Hidroeng</p>
+              <p className="text-xs uppercase tracking-widest text-orange-500">Infraestrutura</p>
             </div>
           </NavLink>
 
-          <nav className="hidden gap-2 md:flex">
+          <nav className="hidden flex-wrap items-center justify-end gap-2 md:flex">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
@@ -36,8 +36,8 @@ function SiteLayout() {
                 className={({ isActive }) =>
                   `rounded-md px-3 py-2 text-sm font-medium transition ${
                     isActive
-                      ? 'bg-sky-500/20 text-sky-200'
-                      : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+                      ? 'border-b-2 border-orange-500 text-orange-600'
+                      : 'text-slate-600 hover:text-orange-500'
                   }`
                 }
               >
@@ -46,7 +46,8 @@ function SiteLayout() {
             ))}
           </nav>
         </div>
-        <nav className="mx-auto flex max-w-6xl overflow-x-auto px-4 pb-3 md:hidden">
+
+        <nav className="mx-auto flex max-w-6xl overflow-x-auto border-t border-slate-200 px-4 py-2 md:hidden">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
@@ -54,8 +55,8 @@ function SiteLayout() {
               className={({ isActive }) =>
                 `mr-2 rounded-full border px-3 py-1 text-xs ${
                   isActive
-                    ? 'border-sky-300 bg-sky-500/20 text-sky-100'
-                    : 'border-slate-700 text-slate-300'
+                    ? 'border-orange-400 bg-orange-100 text-orange-700'
+                    : 'border-slate-300 text-slate-600'
                 }`
               }
             >
