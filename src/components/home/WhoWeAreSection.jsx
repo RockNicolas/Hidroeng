@@ -6,7 +6,7 @@ function WhoWeAreSection({ image }) {
 
   return (
     <section ref={ref} className="-mx-[calc(50dvw-50%)] w-dvw overflow-hidden bg-slate-100 py-8 text-slate-800 sm:py-10">
-      <div className="grid items-stretch md:grid-cols-[1.75fr_1fr]">
+      <div className="mx-auto grid max-w-6xl items-stretch gap-4 px-4 sm:px-6 md:grid-cols-[1.75fr_1fr] md:gap-6">
         <div
           className={`flex h-[240px] items-center justify-center bg-slate-100 transition-all duration-1000 sm:h-[320px] md:h-[420px] ${
             isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
