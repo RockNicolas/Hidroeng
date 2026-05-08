@@ -47,16 +47,16 @@ function SiteLayout() {
           </nav>
         </div>
 
-        <nav className="flex w-full overflow-x-auto border-t border-slate-200 px-4 py-2 md:hidden">
+        <nav className="grid w-full grid-cols-3 gap-2 border-t border-slate-200 px-3 py-2 sm:grid-cols-5 md:hidden">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `mr-2 rounded-full border px-3 py-1 text-xs ${
+                `rounded-full border px-2 py-1 text-center text-[11px] leading-tight ${
                   isActive
                     ? 'border-orange-400 bg-orange-100 text-orange-700'
-                    : 'border-slate-300 text-slate-600'
+                    : 'border-slate-300 bg-white text-slate-600'
                 }`
               }
             >
