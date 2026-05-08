@@ -4,7 +4,7 @@ import logo from '../assets/logo/logo-page-Photoroom.png'
 import Footer from './Footer'
 
 const navLinks = [
-  { to: '/', label: 'Inicio' },
+  { to: '/', label: 'Início' },
   { to: '/empresa', label: 'Empresa' },
   { to: '/empreendimentos', label: 'Empreendimentos' },
   { to: '/portfolio', label: 'Portfólio' },
@@ -14,7 +14,7 @@ const navLinks = [
 
 function SiteLayout() {
   return (
-    <div className="min-h-screen bg-slate-100 text-slate-100">
+    <div className="flex min-h-screen flex-col bg-slate-100 text-slate-100">
       <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-gradient-to-b from-[rgba(248,250,252,0.95)] via-[rgba(248,250,252,0.75)] to-[rgba(248,250,252,0.15)] text-slate-800 shadow-sm backdrop-blur-sm">
         <div className="flex w-full items-center justify-between gap-3 px-3 py-2 sm:px-4 sm:py-3 md:gap-6 md:px-8 lg:px-10">
           <NavLink to="/" className="flex items-center gap-3">
@@ -67,7 +67,7 @@ function SiteLayout() {
         </nav>
       </header>
 
-      <main className="mx-auto w-full max-w-6xl px-3 pb-10 pt-0 sm:px-4">
+      <main className="mx-auto w-full max-w-6xl flex-1 px-3 pb-10 pt-0 sm:px-4">
         <Outlet />
       </main>
 
