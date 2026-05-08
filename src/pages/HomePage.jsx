@@ -1,4 +1,3 @@
-import { FaBuilding, FaClipboardCheck, FaHandshake, FaTools } from 'react-icons/fa'
 import houseOne from '../assets/casas/Modern-Minimalist-House.png'
 import houseTwo from '../assets/casas/Modern-Architectural-Elegance.png'
 import buildingImage from '../assets/casas/Twilight Modern House.png'

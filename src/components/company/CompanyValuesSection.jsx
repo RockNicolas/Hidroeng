@@ -7,19 +7,19 @@ const valueCards = [
     title: 'Missão',
     Icon: FaBullseye,
     description:
-      'Construir com qualidade e novas tecnologias, proporcionando o crescimento da empresa, atendendo as necessidades dos clientes e colaboradores, contribuindo para o bem-estar da sociedade.',
+      'Construir casas e condomínios com qualidade, inovação e compromisso com cada família, garantindo obras seguras, funcionais e duradouras.',
   },
   {
     title: 'Política',
     Icon: FaHardHat,
     description:
-      'Desenvolver produtos e serviços que satisfaçam aos clientes, atendendo aos requisitos aplicáveis, a partir de melhoria contínua com o envolvimento de todos.',
+      'Executar cada empreendimento residencial com planejamento, transparência e melhoria contínua, atendendo rigorosamente aos requisitos técnicos e legais.',
   },
   {
     title: 'Visão',
     Icon: FaBuilding,
     description:
-      'Ajudar no desenvolvimento do estado do Ceará, levando obras de relevância para toda a população cearense e gerando empreendimentos surpreendentes.',
+      'Ser referência no Ceará em construção de casas e condomínios, reconhecida pela excelência técnica, confiança e valorização do patrimônio dos clientes.',
   },
 ]
 

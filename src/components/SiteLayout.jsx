@@ -7,7 +7,6 @@ const navLinks = [
   { to: '/', label: 'Início' },
   { to: '/empresa', label: 'Empresa' },
   { to: '/empreendimentos', label: 'Empreendimentos' },
-  { to: '/portfolio', label: 'Portfólio' },
   { to: '/depoimentos', label: 'Depoimentos' },
   { to: '/contato', label: 'Contato' },
 ]

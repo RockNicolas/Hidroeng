@@ -30,19 +30,20 @@ function CompanyHeroSection() {
           </h1>
 
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-700 sm:text-base">
-            A HIDROENG INFRAESTRUTURA é uma empresa cearense consolidada no ramo da engenharia civil, com vasta experiência 
-            na condução de projetos de saneamento e grandes obras na cidade de Fortaleza e região.
+            A HIDROENG INFRAESTRUTURA é especializada na construção de casas e condomínios, unindo engenharia, arquitetura
+            e planejamento para entregar empreendimentos residenciais com alto padrão de qualidade.
           </p>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-700 sm:text-base">
-            Comprometida com a excelência técnica, a Hidroeng atua há décadas no mercado, 
-            transformando desafios em soluções eficientes e sustentáveis para a sociedade.
+            Com experiência no mercado cearense, atuamos em todas as etapas da obra, da fundação ao acabamento,
+            transformando projetos em lares seguros, funcionais e valorizados.
           </p>
 
           <button
+            onClick={() => window.location.href = '/contato'}
             type="button"
             className="mt-5 rounded-lg bg-orange-500 px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange-600"
           >
-            Solicitar orçamento
+            Solicitar orçamento 
           </button>
         </div>
 
