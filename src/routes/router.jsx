@@ -1,10 +1,13 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
+import AdminProtectedRoute from './AdminProtectedRoute'
 import SiteLayout from '../components/SiteLayout'
+import AdminLoginPage from '../pages/AdminLoginPage'
 import CompanyPage from '../pages/CompanyPage'
 import ContactPage from '../pages/ContactPage'
 import HomePage from '../pages/HomePage'
 import ProjectDetailPage from '../pages/ProjectDetailPage'
 import ProjectsPage from '../pages/ProjectsPage'
+import AdminTestimonialsPage from '../pages/AdminTestimonialsPage'
 import TestimonialsPage from '../pages/TestimonialsPage'
 import ScrollToTop from './ScrollToTop'
 
@@ -19,6 +22,10 @@ function Router() {
           <Route path="/empreendimentos" element={<ProjectsPage />} />
           <Route path="/empreendimentos/:slug" element={<ProjectDetailPage />} />
           <Route path="/depoimentos" element={<TestimonialsPage />} />
+          <Route path="/admin/login" element={<AdminLoginPage />} />
+          <Route element={<AdminProtectedRoute />}>
+            <Route path="/admin/depoimentos" element={<AdminTestimonialsPage />} />
+          </Route>
           <Route path="/contato" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>

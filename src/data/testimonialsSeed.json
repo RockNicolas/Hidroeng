@@ -1,0 +1,18 @@
+[
+  {
+    "id": "seed-1",
+    "name": "Marcos Vinicius",
+    "role": "Cliente residencial",
+    "rating": 5,
+    "message": "A Hidroeng entregou nossa casa com excelente organizacao, comunicacao clara e alto padrao de acabamento.",
+    "createdAt": "2026-05-01T10:00:00.000Z"
+  },
+  {
+    "id": "seed-2",
+    "name": "Carla Menezes",
+    "role": "Síndica de condomínio",
+    "rating": 5,
+    "message": "Equipe profissional e comprometida. O cronograma do condominio foi respeitado e o resultado final ficou excelente.",
+    "createdAt": "2026-05-03T14:30:00.000Z"
+  }
+]
