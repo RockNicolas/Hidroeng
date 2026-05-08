@@ -1,16 +1,105 @@
-# React + Vite
+# Hidroeng Infraestrutura
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site institucional da Hidroeng desenvolvido com React + Vite, com páginas de:
 
-Currently, two official plugins are available:
+- Início
+- Empresa
+- Empreendimentos (com detalhes por rota)
+- Depoimentos (com envio e avaliação por estrelas)
+- Contato
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologias
 
-## React Compiler
+- React
+- Vite
+- React Router DOM
+- Tailwind CSS
+- React Icons
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Como rodar localmente
 
-## Expanding the ESLint configuration
+1. Instale as dependências:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+2. Inicie o projeto:
+
+```bash
+npm run dev
+```
+
+3. Acesse no navegador:
+
+`http://localhost:5173`
+
+## Variáveis de ambiente
+
+Crie um arquivo `.env` na raiz com:
+
+```env
+VITE_ADMIN_USERNAME=admin
+VITE_ADMIN_PASSWORD=123456
+```
+
+> Importante: o `.env` está no `.gitignore` e não deve ser enviado para o repositório.
+
+## Área administrativa de depoimentos
+
+Login admin:
+
+- Rota: `/admin/login`
+- Usuário e senha: vindos do `.env`
+
+Gestão de comentários:
+
+- Rota protegida: `/admin/depoimentos`
+- Permite apagar depoimentos inadequados.
+
+## Depoimentos e armazenamento em JSON
+
+Os depoimentos ficam salvos no navegador em formato JSON via `localStorage`:
+
+- Chave: `hidroeng_testimonials_json`
+- Seed inicial: `src/data/testimonialsSeed.json`
+- Serviço de armazenamento: `src/services/testimonialsStorage.js`
+
+## Deploy na Vercel
+
+Configuração padrão:
+
+- Build Command: `npm run build`
+- Output Directory: `dist`
+
+Adicione no painel da Vercel as variáveis:
+
+- `VITE_ADMIN_USERNAME`
+- `VITE_ADMIN_PASSWORD`
+
+Para evitar erro 404 em rotas do React Router, este projeto usa `vercel.json` com rewrite SPA.
+
+## Capturas de tela
+
+### Home
+
+![Home - Hidroeng](./src/assets/casas/Modern-Minimalist-House.png)
+
+### Empresa
+
+![Empresa - Hidroeng](./src/assets/empresa/EQUIPE.png)
+
+### Empreendimentos
+
+![Empreendimentos - Hidroeng](./src/assets/empreendimentos/pexels-claiton-13631997.jpg)
+
+### Depoimentos
+
+![Depoimentos - Hidroeng](./src/assets/depoimento/Luxurious%20Coastal%20House%20with%20Infinity%20Pool.png)
+
+## Scripts disponíveis
+
+- `npm run dev` - ambiente de desenvolvimento
+- `npm run build` - build de produção
+- `npm run preview` - preview local do build
+- `npm run lint` - validação de lint
