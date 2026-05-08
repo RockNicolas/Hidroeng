@@ -22,6 +22,7 @@ function Router() {
           <Route path="/empreendimentos" element={<ProjectsPage />} />
           <Route path="/empreendimentos/:slug" element={<ProjectDetailPage />} />
           <Route path="/depoimentos" element={<TestimonialsPage />} />
+          <Route path="/admin" element={<Navigate to="/admin/login" replace />} />
           <Route path="/admin/login" element={<AdminLoginPage />} />
           <Route element={<AdminProtectedRoute />}>
             <Route path="/admin/depoimentos" element={<AdminTestimonialsPage />} />
