@@ -6,16 +6,16 @@ function WhoWeAreSection({ image }) {
 
   return (
     <section ref={ref} className="-mx-[calc(50dvw-50%)] w-dvw overflow-hidden bg-slate-100 py-8 text-slate-800 sm:py-10">
-      <div className="grid items-stretch md:grid-cols-[2.2fr_1fr]">
+      <div className="grid items-stretch md:grid-cols-[1.75fr_1fr]">
         <div
           className={`flex h-[240px] items-center justify-center bg-slate-100 transition-all duration-1000 sm:h-[320px] md:h-[420px] ${
             isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
           }`}
         >
-          <img src={image} alt="Empreendimento moderno Hidroeng" className="h-full w-full object-contain" />
+          <img src={image} alt="Empreendimento moderno Hidroeng" className="h-full w-full object-cover" />
         </div>
         <div
-          className={`flex items-center px-4 py-6 transition-all delay-150 duration-1000 sm:px-8 sm:py-8 md:px-10 ${
+          className={`flex items-center px-4 py-6 transition-all delay-150 duration-1000 sm:px-7 sm:py-8 md:px-6 ${
             isVisible ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'
           }`}
         >
