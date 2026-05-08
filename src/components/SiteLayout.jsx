@@ -71,7 +71,7 @@ function SiteLayout() {
       </main>
 
       <a
-        href="https://wa.me/5585997665652?text=Ola%2C%20quero%20falar%20com%20a%20Hidroeng."
+        href="https://wa.me/5585998528528?text=Ola%2C%20quero%20falar%20com%20a%20Hidroeng."
         target="_blank"
         rel="noreferrer"
         aria-label="Falar no WhatsApp"

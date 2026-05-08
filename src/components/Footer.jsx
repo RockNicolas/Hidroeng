@@ -26,7 +26,7 @@ function Footer() {
             <h4 className="text-lg font-semibold text-white">Fale Conosco</h4>
             <ul className="mt-3 space-y-2 text-sm text-slate-300">
               <li className="flex items-start gap-2"><FaMapMarkerAlt className="mt-0.5 shrink-0 text-orange-400" /> Fortaleza, CE - Brasil</li>
-              <li className="flex items-center gap-2"><FaPhoneAlt className="text-orange-400" /> +55 85 99766-5652</li>
+              <li className="flex items-center gap-2"><FaPhoneAlt className="text-orange-400" /> +55 85 99852-8528</li>
               <li className="flex items-center gap-2"><FaEnvelope className="text-orange-400" /> contato@hidroeng.com</li>
             </ul>
             <div className="mt-4 flex items-center gap-2 text-base">
