@@ -31,7 +31,7 @@ function Footer() {
             </ul>
             <div className="mt-4 flex items-center gap-2 text-base">
               <a href="#" aria-label="LinkedIn" className="rounded-full bg-white p-2 text-slate-900 hover:text-orange-500"><FaLinkedinIn /></a>
-              <a href="https://www.instagram.com/duo.construtora/" aria-label="Instagram" className="rounded-full bg-white p-2 text-slate-900 hover:text-orange-500"><FaInstagram /></a>
+              <a href="https://www.instagram.com" aria-label="Instagram" className="rounded-full bg-white p-2 text-slate-900 hover:text-orange-500"><FaInstagram /></a>
             </div>
           </div>
         </div>
